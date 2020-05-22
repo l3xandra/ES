@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageSelected"
+
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:padding="3dp"
+        android:src="@drawable/rabbit"
+        />
+
+    <Button
+        android:id="@+id/seguinteBotao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="1"
+        android:onClick="seguinte"
+        android:text="Seguinte" />
+
+    <Button
+        android:id="@+id/anterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:onClick="anterior"
+        android:text="Anterior" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageSelected"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp">
+
+        <FrameLayout
+            android:id="@+id/originalPic"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <Button
+                android:id="@+id/originalFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="originalPic"
+                android:stateListAnimator="@null"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:padding="3dp"
+                android:src="@drawable/rabbit" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Original"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/filterLayout1"
+            android:padding="2dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/originalPic">
+
+            <Button
+                android:id="@+id/filter1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="filter1"
+                android:stateListAnimator="@null" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/rabbit1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Filtro 1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/filterLayout2"
+            android:padding="2dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/filterLayout1">
+
+            <Button
+                android:id="@+id/filter2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="filter2"
+                android:stateListAnimator="@null" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/rabbit2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Filtro 2"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/filterLayout3"
+            android:padding="2dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/filterLayout2">
+
+            <Button
+                android:id="@+id/filter3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="filter3"
+                android:stateListAnimator="@null" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/rabbit3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Filtro 3"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cancelar"
+        android:layout_alignParentLeft="true"/>
+
+
+    <GridView
+        android:id="@+id/galeria"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:horizontalSpacing="2dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+        android:layout_below="@id/cancelar"
+        android:clickable="true"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/selector">
+
+
+    </GridView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/galeria">
+        <Button
+            android:id="@+id/galeriaBotao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Galeria"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/fotoBotao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="takePicture"
+            android:text="Foto" />
+
+        <Button
+            android:id="@+id/videoBotao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:onClick="takeVideo"
+            android:text="Vídeo" />
+    </FrameLayout>
+
+
+</RelativeLayout>

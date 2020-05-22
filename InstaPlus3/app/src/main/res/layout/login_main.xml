@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/layoutLogin"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/loginFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Entrar com o Facebook" />
+
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginFacebook"
+            android:text="Login" />
+
+        <EditText
+            android:id="@+id/usernameInsert"
+            android:layout_below="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="username" />
+
+        <EditText
+            android:id="@+id/passwordInsert"
+            android:layout_below="@+id/usernameInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_below="@+id/passwordInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entrar" />
+
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/forgetPassword"
+        android:layout_below="@+id/layoutLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="5dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/blue"
+        android:text="Esqueceu-se da palavra passe?" />
+
+    <Button
+        android:id="@+id/noAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgetPassword"
+        android:layout_centerHorizontal="true"
+        android:height="5dp"
+        android:backgroundTint="@color/white"
+        android:onClick="goToRegister"
+        android:text="Não tem conta? Registe-se!"
+        android:textColor="@color/blue" />
+</RelativeLayout>

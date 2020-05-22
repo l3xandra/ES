@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/postarButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:textSize="30dp"
+        android:text="Postar"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/anteriorBotao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:onClick="goBack"
+        android:text="Anterior" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:id="@+id/fotoEDesc"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anteriorBotao3">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/descricao"
+            android:ems="100"
+            android:inputType="text"
+            android:hint="Descrição" />
+    </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/localizacaoAutoComplete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/fotoEDesc"
+        android:completionThreshold="1"
+        android:ems="50"
+        android:singleLine="true"
+        android:completionHint="Localização"
+        android:hint="Localização"
+        android:imeOptions="actionDone"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/localizacaoAutoComplete"
+        android:paddingTop="40dp"
+        android:gravity="center">
+        <Switch
+            android:id="@+id/facebookSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook            "
+            android:textSize="20dp"/>
+        <Switch
+            android:id="@+id/twitterSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_below="@+id/facebookSwitch"
+            android:text="Twitter                 " />
+        <Switch
+            android:id="@+id/tumblrSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_below="@+id/twitterSwitch"
+            android:text="Tumblr                 " />
+    </RelativeLayout>
+
+</RelativeLayout>

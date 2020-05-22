@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/registerFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Registe-se com o Facebook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/insertPhone"
+        android:layout_below="@+id/registerFacebook"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:inputType="number"
+        android:hint="Número de telemóvel" />
+
+    <EditText
+        android:id="@+id/insertName"
+        android:layout_below="@+id/insertPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:hint="Nome completo" />
+
+
+    <RelativeLayout
+        android:layout_width="268dp"
+        android:layout_height="47dp"
+        android:id="@+id/usernameLayout"
+        android:layout_below="@+id/insertName"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/createUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:ems="11"
+            android:hint="Nome de utilizador"
+            android:inputType="text"
+            android:onClick="showCross"/>
+
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="37dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="11dp"
+            android:layout_toRightOf="@+id/createUsername" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/insertPass"
+        android:layout_below="@+id/usernameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:inputType="textPassword"
+        android:hint="Palavra passe" />
+
+    <EditText
+        android:id="@+id/insertPass2"
+        android:layout_below="@+id/insertPass"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:inputType="textPassword"
+        android:hint="Repita a palavra passe" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_below="@+id/insertPass2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errorMessage"
+        android:layout_centerHorizontal="true">
+    <Button
+        android:id="@+id/registerAnterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errorMessage"
+        android:onClick="register"
+        android:text="Anterior" />
+
+    <Button
+        android:id="@+id/registarSeguinte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errorMessage"
+        android:onClick="register"
+        android:text="Seguinte" />
+</LinearLayout>
+
+</RelativeLayout>
